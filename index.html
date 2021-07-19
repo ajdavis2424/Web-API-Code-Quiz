@@ -10,36 +10,33 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-   <!-- 1st established header -->
-    <header>
-       <div class="highScore"> View Highscores!</div>
-       <div class="timer">Time: 75 seconds</div>
+      <!-- 1st established header -->
+      <header>
+        <div class="highScore"> View Highscores!</div>
+        <div class="timer">Time: 75 seconds</div>
+    </header>
+   
+    <!-- START QUIZ BUTTON -->
+    <div class="start-btn"><button>START QUIZ</button></div>
 
-       <!-- Main container will have most content -->
-   </header>
-    <section class="s1">
-        <div class="main-container" id="quizContainer">
-<!-- first row -->
-            <div class="row">
-<!-- FLEX COLUMN WILL DISPLAY GAME INSTRUCTIONS--- TRYING BOOTSTRAP FOR COLUMNS -->
-<div class="board">
-    <div class="board-body">
-        <h1 class="board-header">Coding Quiz Challenge</h1>
-        <p class="board-text">This is a quiz that will determine your skill and knowledge level of Javascript. There are 5 multiple chocie questions, and this test begins once you click the "start" button. You have 75 seconds to complete all 5 questions, and each wrong answer deducts 10 seconds from your overall time. Your score is the remaining time once the last answer is completed.
-        <br>
-        <br>
-        <strong>GOOD LUCK!!!</strong>
-        </p>
+  <!-- Info Box defined -->
+<div class="info-box">
+    <div class="info-title">
+        <span>RULES FOR THIS CODING QUIZ</span>
+    </div>
+    <!-- SPAN BREAK ALLOWS ME TO BOLD TEXT -->
+    <div class="rules-list">
+        <ol class="rules">1. You will have <span>75 seconds</span>to complete the entire quiz</ol>
+        <ol class="rules">2. Each incorrect answer deducts 10 seconds of your time</ol>
+        <ol class="rules">3. Your completion time will be your score</ol>
+        <ol class="rules">4. You can exit this quiz anytime</ol>
+    </div>
+    <div class="button">
+        <button class="exit">Exit Quiz</button>
+        <button class="restart">Continue Quiz</button>
     </div>
 </div>
-            </div>
-        </div>
 
-    </section>
-<div>
-    <button type="button" class="btn btn-start" id="start">Start Quiz</button>
-</div>
-    
 <script type="text/javascript" src="./code-quiz.js"></script>    
 </body>
 </html>
