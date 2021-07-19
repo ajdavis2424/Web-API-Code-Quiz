@@ -1,7 +1,12 @@
+header{
+    width: 100%;
+}
+
 .btn-dark{
     justify-content: center;
     margin: 10px;
     justify-content: center;
+    display: inline-block;
 }
 
 .main-container{
@@ -11,4 +16,10 @@
 
 .board{
     text-align: center;
+}
+
+.timer{
+    float: right;
+    text-align: right;
+    align-content: right;
 }
