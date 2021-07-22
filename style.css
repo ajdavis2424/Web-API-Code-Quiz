@@ -6,9 +6,10 @@ body{
     background-color:#007bff;
 }
 
-/* position abolute to keep it fixed */
+/* position abolute to keep it fixed-- need start button, info box, and quiz box absolute */
 .start-btn,
-.info-box{
+.info-box,
+.quiz-box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -28,7 +29,9 @@ body{
     cursor: pointer;
 }
 
+/* Display none hides the box until the star button is pressed- added after styling */
 .info-box{
+    display: none;
     width: 540px;
     background:#fff;
     border-radius: 5px;
@@ -64,13 +67,95 @@ body{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 35px;
+    padding: 0px 35px;
     border-top: 1px solid lightgray;
 }
-/* these properties centered my main board text */
+/* transparent should grey box out */
+.info-box .buttons button{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: ease;
+}
+.buttons button.restart{
+color: #fff;
+background: #007bff;
+}
 
-.timer{
+.buttons button.restart:hover{
+    background: #0263ca;
+}
+
+.buttons button.exit{
+    color: #007bff;
+}
+
+.buttons button.exit:hover{
+    color: #fff;
+    background: #007bff;
+}
+
+
+.quiz-box{
+    width: 550px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.quiz-box header{
+    height: 70px;
+    padding: 0 30px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
+}
+.quiz-box header title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* * these properties centered my main board text */ */
+
+.quiz-box .timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    height: 45px;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+    border-radius: 5px;
+    padding: 0 8px;
     float: right;
     text-align: right;
     align-content: right;
+}
+
+.quiz-box .timer .timer-text{
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+}
+
+.quiz-box header .timer .timer-sec{
+    font-size: 18px;
+    font-weight: 500;
+    background: #343a40;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid #343a40;
+    user-select: none;
 }
