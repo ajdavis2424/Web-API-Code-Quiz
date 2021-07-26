@@ -1,17 +1,18 @@
 // establish all required elements-- CONST= ELEMENTS WILL ALWAYS PERFORM 1 ACTION
 const start-btn = document.querySelector(".start-btn button")
 const info-box = document.querySelector(".info-box")
-const exit-button = document.querySelector(".buttons .quit")
-const restart-btn = document.querySelector(".buttons .restart");
+const exit-button = .querySelector(".buttons .quit")
+const restart-btn = .querySelector(".buttons .restart");
+const quiz-box = document.querySelector(".quiz-box")
 
 // IF START BUTTON CLICKED... show info box
 start-btn.onclick = ()=>{
     info-box.classlist.add("activeInfo"); 
 }
 // IF EXIT BUTTON CLICKED... hide info box
-exit-btn.onclick = ()=>{
-    info-box.classlist.remove("activeInfo");
-}
+// exit-btn.onclick = ()=>{
+    // info-box.classlist.remove("activeInfo");
+// }
 
 // IF QUIT BUTTON CLICKED... hide info box
 exit-btn.onclick = ()=>{
@@ -21,38 +22,23 @@ exit-btn.onclick = ()=>{
 // IF RESTART BUTTON CLICKED... hide info box & quiz box
 exit-btn.onclick = ()=>{
     info-box.classlist.remove("activeQuiz");
-    quiz-box.classlist.remove("activeQuiz");
+    quiz-box.classlist.add("activeQuiz");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// QUESTIONS---creating an array and passin the number, questions, rules, and answer
+let questions = [
+    {
+        numb:1,
+        question: "Who invented Javascript?",
+        answer: "Brendan Eich"
+        options: [
+            "Brendan Eich"
+            "Brendan Eichman"
+            "Brian Griese"
+            "Brendan Schaub"
+        ]
+    },
+];
 
 
 
